@@ -1,6 +1,18 @@
-<html>
-	<body>
-		Something
+<html ng-app="app3">
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+
+	<body ng-controller="mainCtrl">
+		
+		Name: <input ng-model="name.name">
+
+		<div class="some" ng-repeat="some in something | filter: name">
+			<span>{{some.name}}</span>
+			<div>{{some.email}} - {{some.dateEmployed}}</div>
+			<span>{{some.phone}}</span>
+		</div>
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
